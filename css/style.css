@@ -1,0 +1,109 @@
+body {
+    font-family: 'IBM Plex Sans';
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1366;
+    background: #EEEEF2;
+    padding: 120px 0 120px;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:387px;
+    background: #FFFFFF;
+    margin: 16px;
+    color: #47464D;
+}
+
+.card__content {
+    margin: 0 30px 30px;
+}
+
+.card .card_title {
+    font-size: 26px;
+    font-weight: 500, Medium;
+    line-height: 33.8px;
+    margin: 0;
+}
+
+.card .card__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-top: 18px;
+}
+
+.card .card__subtitle a{
+    text-decoration: none;
+    color: #0084D1;
+}
+
+.wpapper::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #0084D1;
+    margin: 40px 30px 24px;
+}
+
+.card__btn {
+    background-color: #0084D1;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 15px 20px 15px 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.card__btn_permit {
+    margin-top: 56px;
+}
+
+.card__btn:hover {
+background-color: #0081f1;
+}
+
+@media (max-width: 872px) { 
+
+    .conteiner {
+       padding: 23px 0 60px;
+    }
+    
+    .card {
+        margin: 37px 25px 0;
+    }
+
+    .card__content {
+        margin: 0 20px 20px;
+    }
+
+    .card .card__subtitle {
+        margin-top: 20px;
+    }
+
+    .wpapper::before {
+        margin: 20px;
+    }
+
+    .card__btn {
+        font-size: 14px;
+        margin-top: 20px;
+        padding: 15px 20px 15px 20px;
+    }
+ }
