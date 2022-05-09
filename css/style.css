@@ -22,7 +22,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width:387px;
+    width: 387px;
     background: #FFFFFF;
     margin: 16px;
     color: #47464D;
@@ -46,7 +46,7 @@ section {
     margin-top: 18px;
 }
 
-.card .card__subtitle a{
+.card .card__subtitle a {
     text-decoration: none;
     color: #0084D1;
 }
@@ -76,15 +76,15 @@ section {
 }
 
 .card__btn:hover {
-background-color: #0081f1;
+    background-color: #0081f1;
 }
 
-@media (max-width: 872px) { 
+@media (max-width: 872px) {
 
     .conteiner {
-       padding: 23px 0 60px;
+        padding: 23px 0 60px;
     }
-    
+
     .card {
         margin: 37px 25px 0;
     }
@@ -106,4 +106,4 @@ background-color: #0081f1;
         margin-top: 20px;
         padding: 15px 20px 15px 20px;
     }
- }
+}
