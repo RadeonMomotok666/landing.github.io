@@ -2,61 +2,116 @@ body {
     font-family: 'IBM Plex Sans';
 }
 
-section {
-    width: 100%;
-    margin: 0 auto;
+.section__cards {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
-.conteiner {
+@media (max-width: 872px) {
+
+    .section__cards {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.section_grey {
+    background: #EEEEF2;
+}
+
+.container {
+    margin: auto;
+    max-width: 856px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cards {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 1366;
-    background: #EEEEF2;
-    padding: 120px 0 120px;
+    margin: -16px;
 }
-
 
 .card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 387px;
     background: #FFFFFF;
     margin: 16px;
-    color: #47464D;
+    width: 387px;
+}
+
+@media (max-width: 872px) {
+    .card {
+        width: 325px;
+    }
+
 }
 
 .card__content {
-    margin: 0 30px 30px;
+    flex-grow: 1;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    color: #47464D;
 }
 
-.card .card_title {
+@media (max-width: 872px) {
+
+    .card__content {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.card__title {
     font-size: 26px;
-    font-weight: 500, Medium;
+    font-weight: 500;
     line-height: 33.8px;
     margin: 0;
 }
 
-.card .card__subtitle {
+.card__subtitle {
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
     margin-top: 18px;
 }
 
-.card .card__subtitle a {
+.card__subtitle a {
     text-decoration: none;
     color: #0084D1;
 }
 
-.wpapper::before {
+@media (max-width: 872px) {
+
+    .card__subtitle {
+        margin-top: 20px;
+    }
+}
+
+.card::before {
+    display: block;
     content: '';
     width: 12px;
     height: 12px;
     background-color: #0084D1;
     margin: 40px 30px 24px;
+}
+
+@media (max-width: 872px) {
+
+    .card::before {
+        margin: 20px;
+    }
+}
+
+.card__footer {
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 25px;
 }
 
 .card__btn {
@@ -65,14 +120,9 @@ section {
     border: none;
     border-radius: 25px;
     font-size: 16px;
-    margin-top: 30px;
     padding: 15px 20px 15px 20px;
     cursor: pointer;
     font-weight: 500;
-}
-
-.card__btn_permit {
-    margin-top: 56px;
 }
 
 .card__btn:hover {
@@ -81,29 +131,14 @@ section {
 
 @media (max-width: 872px) {
 
-    .conteiner {
-        padding: 23px 0 60px;
-    }
-
-    .card {
-        margin: 37px 25px 0;
-    }
-
-    .card__content {
-        margin: 0 20px 20px;
-    }
-
-    .card .card__subtitle {
-        margin-top: 20px;
-    }
-
-    .wpapper::before {
-        margin: 20px;
-    }
-
     .card__btn {
         font-size: 14px;
-        margin-top: 20px;
-        padding: 15px 20px 15px 20px;
+        padding: 16px 24px 16px 25px;
+    }
+
+    .card__footer {
+        padding-bottom: 25px;
+        padding-left: 20px;
+        padding-right: 25px;
     }
 }
