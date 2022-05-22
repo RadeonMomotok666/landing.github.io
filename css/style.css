@@ -1,22 +1,23 @@
 body {
-    font-family: 'IBM Plex Sans';
+    font-family: "IBM Plex Sans";
 }
 
 .section_cards {
     padding-top: 120px;
     padding-bottom: 120px;
+    padding-left: 16px;
 }
 
 @media (max-width: 872px) {
-
     .section_cards {
         padding-top: 60px;
         padding-bottom: 60px;
+        padding-left: 0;
     }
 }
 
 .section_grey {
-    background: #EEEEF2;
+    background: #eeeef2;
 }
 
 .container {
@@ -36,8 +37,8 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    background: #FFFFFF;
-    margin: 16px;
+    background: #ffffff;
+    margin: 17px 16px 20px 16px;
     width: 387px;
 }
 
@@ -45,7 +46,6 @@ body {
     .card {
         width: 325px;
     }
-
 }
 
 .card__content {
@@ -54,11 +54,10 @@ body {
     margin-right: 30px;
     margin-bottom: 30px;
     align-items: flex-start;
-    color: #47464D;
+    color: #47464d;
 }
 
 @media (max-width: 872px) {
-
     .card__content {
         margin-left: 20px;
         margin-right: 20px;
@@ -82,11 +81,10 @@ body {
 
 .card__subtitle a {
     text-decoration: none;
-    color: #0084D1;
+    color: #0084d1;
 }
 
 @media (max-width: 872px) {
-
     .card__subtitle {
         margin-top: 20px;
     }
@@ -94,15 +92,14 @@ body {
 
 .card::before {
     display: block;
-    content: '';
+    content: "";
     width: 12px;
     height: 12px;
-    background-color: #0084D1;
+    background-color: #0084d1;
     margin: 40px 30px 24px;
 }
 
 @media (max-width: 872px) {
-
     .card::before {
         margin: 20px;
     }
@@ -115,7 +112,6 @@ body {
 }
 
 @media (max-width: 872px) {
-
     .card__footer {
         padding-bottom: 20px;
         padding-left: 20px;
@@ -124,12 +120,12 @@ body {
 }
 
 .card__btn {
-    background-color: #0084D1;
-    color: #FFFFFF;
+    background-color: #0084d1;
+    color: #ffffff;
     border: none;
     border-radius: 25px;
     font-size: 16px;
-    padding: 15px 20px 15px 20px;
+    padding: 16px 21px 16px 21px;
     cursor: pointer;
     font-weight: 500;
 }
@@ -139,7 +135,6 @@ body {
 }
 
 @media (max-width: 872px) {
-
     .card__btn {
         font-size: 14px;
         padding: 17px 21px 17px 20px;
@@ -147,98 +142,198 @@ body {
 }
 
 .article {
-    display: flex;
-    flex-wrap: wrap;
-    color: #47464D;
-    padding-right: 60px;
-    padding-left: 50px;
-    margin-left: -16px;
-    margin-right: -16px;
+    color: #47464d;
+    padding-right: 55px;
+    padding-left: 25px;
 }
 
 @media (max-width: 872px) {
-
     .article {
-        padding-right: 17px;
-        padding-left: 15px;
+        padding: 0;
     }
 }
 
-.article__title {
+.article h2 {
     font-size: 42px;
-    line-height: 52px;
+    line-height: 46px;
     font-weight: 500;
-    color: #19181F;
-    margin-bottom: 6px;
+    color: #19181f;
 }
 
 @media (max-width: 872px) {
-
-    .article__title {
+    .article h2 {
         font-size: 28px;
         line-height: 38px;
-        margin-bottom: 1px;
+        margin-top: -4px;
     }
 }
 
-.article__subtitle {
+.article ol {
     counter-reset: article-counter;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-.article__subtitle li {
+.article ol li {
+    position: relative;
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
     padding-top: 20px;
+    padding-left: 74px;
     counter-increment: article-counter;
-    display: flex;
 }
 
-.article__subtitle li::before {
+.article ol li::before {
+    position: absolute;
     font-size: 30px;
     font-weight: 500;
-    color: #0084D1;
+    color: #0084d1;
     content: "0" counter(article-counter) ".";
-    margin-right: 30px;
-    padding-top: 6px;
+    left: 0;
+    top: 27px;
 }
 
+@media (max-width: 872px) {
+    .article ol li::before {
+        font-size: 26px;
+        top: 23px;
+        left: -1px;
+    }
+
+    .article ol li {
+        padding-left: 54px;
+    }
+}
+
+.container__article {
+    max-width: 1366px;
+    margin: auto;
+}
+
+.article__wrapp {
+    display: flex;
+    align-items: center;
+}
 
 @media (max-width: 872px) {
-
-    .article__subtitle li::before {
-        font-size: 26px;
-        margin-right: 14px;
-        padding-top: 3px;
+    .article__wrapp {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding-top: 20px;
+        padding-bottom: 63px;
     }
+}
+
+.article__item {
+    width: 561px;
+    height: 602px;
+}
+
+.article__item::before {
+    content: url(../fonts/picture/home_img_1.png);
+}
+
+@media (max-width: 872px) {
+    .article__item::before {
+        content: url(../fonts/picture/home_img_375.png);
+    }
+
+    .article__item {
+        width: 375px;
+        height: 270px;
+        padding-top: 60px;
+    }
+}
+
+.article__content {
+    padding-left: 138px;
+    padding-right: 155px;
+    padding-top: 5px;
+}
+
+@media (max-width: 872px) {
+    .article__content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.article p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-top: 28px;
+}
+
+@media (max-width: 872px) {
+    .article p {
+        padding-top: 20px;
+    }
+}
+
+.article ul {
+    padding-top: 11px;
+}
+
+@media (max-width: 872px) {
+    .article ul {
+        padding-top: 4px;
+    }
+}
+
+.article ul li {
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    padding-top: 15px;
+    padding-left: 48px;
+}
+
+.route::before {
+    content: url(../fonts/picture/route_icon.svg);
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+.unlock::before {
+    content: url(../fonts/picture/unlock_icon.svg);
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+.documents::before {
+    content: url(../fonts/picture/documents_icon.svg);
+    position: absolute;
+    left: 0;
+    top: 18px;
 }
 
 .social {
     width: 70px;
-    height: 200px;
-    background-color: #2A2930;
+    background-color: #2a2930;
     position: fixed;
     bottom: 0;
     right: 0;
-}
-
-.social__links {
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
+@media (max-width: 872px) {
+    .social {
+        display: none;
+    }
+}
+
 .social__link {
     width: 38px;
     height: 38px;
-    border: 1px solid #808080;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
 }
 
 .social_instagram {
@@ -253,13 +348,6 @@ body {
     background: no-repeat center url(../fonts/picture/Combined\ Shape.svg);
 }
 
-.social__links a:hover {
-    opacity: 0.75;
-}
-
-@media (max-width: 872px) {
-
-    .social {
-        display: none;
-    }
+.social a:hover {
+    border-color: rgba(255, 255, 255, 1);
 }
